@@ -104,4 +104,6 @@ venv.bak/
 .mypy_cache/
 
 inception/train_dir
+inception/official_ckpt
+*.ckpt
 

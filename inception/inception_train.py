@@ -57,7 +57,7 @@ tf.app.flags.DEFINE_boolean('fine_tune', False,
                             """If set, randomly initialize the final layer """
                             """of weights in order to train the network on a """
                             """new task.""")
-tf.app.flags.DEFINE_string('pretrained_model_checkpoint_path', 'train_dir',
+tf.app.flags.DEFINE_string('pretrained_model_checkpoint_path', 'official_ckpt',
                            """If specified, restore this pretrained model """
                            """before beginning any training.""")
 
