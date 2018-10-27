@@ -30,28 +30,75 @@
     <SUITE FILE_PATH="coverage/tensorflow$resnet_run_loop.coverage" NAME="resnet_run_loop Coverage Results" MODIFIED="1540480089826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models-1.11/official/resnet" />
     <SUITE FILE_PATH="coverage/tensorflow$mnist_eager_test.coverage" NAME="mnist_eager_test Coverage Results" MODIFIED="1540479868829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models-1.11/official/mnist" />
     <SUITE FILE_PATH="coverage/tensorflow$flowers_data.coverage" NAME="flowers_data Coverage Results" MODIFIED="1540483725295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/research/inception/inception" />
+    <SUITE FILE_PATH="coverage/tensorflow$tf_test.coverage" NAME="tf_test Coverage Results" MODIFIED="1540647543775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/tensorflow$imagenet_main.coverage" NAME="imagenet_main Coverage Results" MODIFIED="1540479987732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models-1.11/official/resnet" />
     <SUITE FILE_PATH="coverage/tensorflow$train_model.coverage" NAME="train_model Coverage Results" MODIFIED="1540480183674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models-1.11/tutorials/rnn/quickdraw" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/inception/flowers_train.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="668">
+                    <caret line="45" column="21" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="23" />
+                    <folding>
+                      <element signature="e#737#775#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/inception/inception_train.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="299">
+                    <caret line="350" column="47" lean-forward="true" selection-start-line="349" selection-start-column="34" selection-end-line="350" selection-end-column="47" />
+                    <folding>
+                      <element signature="e#759#797#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/temp.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="143">
+                    <caret line="81" column="53" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="53" />
+                    <folding>
+                      <element signature="e#0#11#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="88297377">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="4" />
-          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="png" value="1" />
-          <entry key="py" value="64" />
+          <entry key="py" value="87" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -59,74 +106,63 @@
         <counts>
           <entry key="Image" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="64" />
+          <entry key="Python" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="1" />
-          <entry key="py" value="337" />
+          <entry key="py" value="837" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="338" />
+          <entry key="Python" value="838" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inception/slim/variables.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3360">
-              <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inception/inception_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="16" selection-start-line="16" selection-end-line="83" selection-end-column="50" />
-              <folding>
-                <element signature="e#759#797#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tf_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="55" column="55" lean-forward="true" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+            <state relative-caret-position="207">
+              <caret line="155" column="43" lean-forward="true" selection-start-line="155" selection-start-column="43" selection-end-line="155" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <marker date="1540647665825" expanded="true" signature="1628:7133" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/image_processing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/training/input.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-93">
+              <caret line="1204" column="47" selection-start-line="1204" selection-start-column="39" selection-end-line="1204" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flags.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="21" column="38" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="38" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inception/inception_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="30" column="31" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="31" />
-              <folding>
-                <element signature="e#989#1027#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inception/slim/slim.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="23" column="38" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -141,31 +177,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inception/flowers_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-              <folding>
-                <element signature="e#737#775#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/inception/dataset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inception/flowers_eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="658">
+              <caret line="35" column="33" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="33" />
               <folding>
                 <element signature="e#740#778#0" expanded="true" />
               </folding>
@@ -177,7 +192,16 @@
         <entry file="file://$PROJECT_DIR$/inception/inception_eval.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-858">
+              <caret line="69" column="8" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -195,8 +219,6 @@
     <findStrings>
       <find>train_directory</find>
       <find>labels_file</find>
-      <find>sess</find>
-      <find>batch</find>
       <find>essfully loaded model</find>
       <find>/tmp</find>
       <find>batch_size</find>
@@ -204,6 +226,24 @@
       <find>batches out of</find>
       <find>num_examples</find>
       <find>slim</find>
+      <find>inception_train.train(dataset)</find>
+      <find>images</find>
+      <find>placeholder</find>
+      <find>train_step</find>
+      <find>batch</find>
+      <find>label</find>
+      <find>train_op</find>
+      <find>sess</find>
+      <find>images_validation</find>
+      <find>max_steps</find>
+      <find>capacity</find>
+      <find>dataset</find>
+      <find>logits</find>
+      <find>split</find>
+      <find>allow_growth</find>
+      <find>labels</find>
+      <find>decode_jpeg</find>
+      <find>labels_train</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -230,6 +270,10 @@
         <option value="$PROJECT_DIR$/inception/inception_eval.py" />
         <option value="$PROJECT_DIR$/inception/dataset.py" />
         <option value="$PROJECT_DIR$/inception/inception_train.py" />
+        <option value="$PROJECT_DIR$/inception/flags.py" />
+        <option value="$PROJECT_DIR$/dataset.py" />
+        <option value="$PROJECT_DIR$/temp.py" />
+        <option value="$PROJECT_DIR$/flags.py" />
         <option value="$PROJECT_DIR$/tf_test.py" />
       </list>
     </option>
@@ -241,8 +285,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1999" />
-    <option name="y" value="135" />
+    <option name="x" value="-1806" />
+    <option name="y" value="156" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -269,7 +313,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,22 +320,18 @@
               <item name="tensorflow" type="b2602c69:ProjectViewProjectNode" />
               <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tensorflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tensorflow" type="462c0819:PsiDirectoryNode" />
-              <item name="inception" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -306,29 +345,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.flowers_train">
-    <configuration name="build_image_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="tensorflow" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build_image_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.tf_test">
     <configuration name="flowers_eval" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tensorflow" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -417,20 +434,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tf_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tensorflow" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tf_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.build_image_data" />
       <item itemvalue="Python.flowers_train" />
       <item itemvalue="Python.inception_train" />
       <item itemvalue="Python.flowers_eval" />
       <item itemvalue="Python.inception_eval" />
+      <item itemvalue="Python.tf_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tf_test" />
         <item itemvalue="Python.flowers_train" />
         <item itemvalue="Python.flowers_eval" />
         <item itemvalue="Python.inception_eval" />
         <item itemvalue="Python.inception_train" />
-        <item itemvalue="Python.build_image_data" />
       </list>
     </recent_temporary>
   </component>
@@ -457,14 +496,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1999" y="135" width="1400" height="1000" extended-state="0" />
+    <frame x="-1806" y="156" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2980626" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30253354" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -498,42 +537,29 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inception/inception_train.py</url>
-          <line>342</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/tf_test.py</url>
+          <line>148</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inception/inception_train.py</url>
-          <line>343</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/tf_test.py</url>
+          <line>157</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/inception/inception_train.py</url>
-          <line>345</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/tf_test.py</url>
+          <line>131</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tf_test.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/keras_application_models/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/keras_application_models/benchmark_main.py" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/tutorials/image/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/tutorials/image/imagenet/classify_image.py" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/official/requirements.txt" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/official/keras_application_models/dataset.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/absl/flags/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models-1.11/benchmark_main.py" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/tutorials/image/alexnet/alexnet_benchmark.py" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/official/keras_application_models/model_callbacks.py" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/official/keras_application_models/benchmark_main.py" />
-    <entry file="file://$PROJECT_DIR$/models-1.11/official/mnist/mnist_test.py" />
     <entry file="file://$PROJECT_DIR$/models-1.11/official/mnist/mnist_eager_test.py" />
     <entry file="file://$PROJECT_DIR$/models-1.11/official/resnet/cifar10_download_and_extract.py" />
     <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/framework/ops.py">
@@ -582,13 +608,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/research/inception/g3doc/inception_v3_architecture.png" />
-    <entry file="file://$PROJECT_DIR$/inception/flowers_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/contrib/learn/python/learn/datasets/mnist.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
@@ -606,37 +625,6 @@
         <state relative-caret-position="-2583" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inception/image_processing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10206">
-          <caret line="490" column="75" selection-start-line="490" selection-start-column="75" selection-end-line="490" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inception/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inception/flowers_eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#740#778#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/inception/inception_eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build_image_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-472">
@@ -644,20 +632,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inception/slim/inception_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-307" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/inception/slim/variables.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="276" lean-forward="true" selection-start-line="276" selection-end-line="276" />
+        <state relative-caret-position="5670">
+          <caret line="276" selection-start-line="276" selection-end-line="276" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inception/flowers_train.py">
+    <entry file="file://$PROJECT_DIR$/inception/flowers_eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+        <state relative-caret-position="658">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="33" />
           <folding>
-            <element signature="e#737#775#0" expanded="true" />
+            <element signature="e#740#778#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inception/flags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inception/slim/slim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inception/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -668,39 +685,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inception/slim/slim.py">
+    <entry file="file://$PROJECT_DIR$/inception/flowers_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="43" />
+        <state relative-caret-position="490">
+          <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding>
+            <element signature="e#735#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inception/inception_eval.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/contrib/keras/api/keras/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/contrib/keras/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="27" column="37" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/contrib/slim/nets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="37" column="45" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/contrib/framework/python/ops/variables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="711" column="68" selection-start-line="711" selection-start-column="13" selection-end-line="711" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-858">
+          <caret line="69" column="8" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/contrib/slim/python/slim/nets/inception_v3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12902">
+          <caret line="680" column="4" selection-start-line="680" selection-start-column="4" selection-end-line="680" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/framework/test_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="879" column="11" lean-forward="true" selection-start-line="879" selection-start-column="11" selection-end-line="879" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inception/image_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="505" lean-forward="true" selection-start-line="505" selection-end-line="505" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/training/optimizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1699">
+          <caret line="525" column="6" selection-start-line="525" selection-start-column="6" selection-end-line="525" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/python/training/input.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="1204" column="47" selection-start-line="1204" selection-start-column="39" selection-end-line="1204" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inception/slim/losses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inception/inception_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="31" />
+        <state relative-caret-position="446">
+          <caret line="124" column="23" selection-start-line="124" selection-start-column="14" selection-end-line="124" selection-end-column="32" />
           <folding>
             <element signature="e#989#1027#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inception/slim/inception_model.py">
+    <entry file="file://$PROJECT_DIR$/inception/flowers_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-307" />
+        <state relative-caret-position="668">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="e#737#775#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/envs/tensorflow/Lib/site-packages/tensorflow/contrib/slim/python/slim/nets/inception_v3.py">
+    <entry file="file://$PROJECT_DIR$/image_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13503">
-          <caret line="680" column="4" selection-start-line="680" selection-start-column="4" selection-end-line="680" selection-end-column="4" />
+        <state relative-caret-position="246">
+          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="81" column="53" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/inception/inception_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="16" selection-start-line="16" selection-end-line="83" selection-end-column="50" />
+        <state relative-caret-position="299">
+          <caret line="350" column="47" lean-forward="true" selection-start-line="349" selection-start-column="34" selection-end-line="350" selection-end-column="47" />
           <folding>
             <element signature="e#759#797#0" expanded="true" />
           </folding>
@@ -709,10 +834,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tf_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="55" column="55" lean-forward="true" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
+        <state relative-caret-position="207">
+          <caret line="155" column="43" lean-forward="true" selection-start-line="155" selection-start-column="43" selection-end-line="155" selection-end-column="43" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+            <marker date="1540647665825" expanded="true" signature="1628:7133" ph="..." />
           </folding>
         </state>
       </provider>
