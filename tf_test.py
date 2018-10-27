@@ -74,7 +74,7 @@ def main(_):
     num_preprocess_threads = FLAGS.num_preprocess_threads * FLAGS.num_gpus
     images_train, labels_train = image_processing.distorted_inputs(trainset,
                                                                    num_preprocess_threads=num_preprocess_threads)
-    images_validation, labels_validation = image_processing.distorted_inputs(validationset,
+    images_validation, labels_validation = image_processing.distorted_inputs(validationset,batch_size=64,
                                                                    num_preprocess_threads=num_preprocess_threads)
     # images_splits = tf.split(axis=0, num_or_size_splits=FLAGS.num_gpus, value=images)
     # labels_splits = tf.split(axis=0, num_or_size_splits=FLAGS.num_gpus, value=labels)
@@ -101,7 +101,8 @@ def main(_):
     # 优化损失函数
     tf.losses.softmax_cross_entropy(tf.one_hot(labels, num_classes), logits, weights=1.0)
     optimizer=tf.train.AdamOptimizer()
-    train_step = optimizer.minimize(tf.losses.get_total_loss(),var_list=trainable_variables)
+    loss=tf.losses.get_total_loss()
+    train_step = optimizer.minimize(loss,var_list=trainable_variables)
 
     # total_loss=tf.losses.softmax_cross_entropy(tf.one_hot(labels, num_classes), logits, weights=1.0)
     # train_step = tf.train.RMSPropOptimizer(FLAGS.initial_learning_rate).minimize(total_loss)
@@ -165,10 +166,10 @@ def main(_):
         # })
         # print(4)
         # print(1)
-        sess.run(train_step, feed_dict={
-            images: image_batch,
-            labels: label_batch
-        })
+        # print(label_batch)
+        # loss_tensor = tf.losses.get_total_loss()
+        sess.run(train_step, feed_dict={images: image_batch, labels: label_batch })
+        # loss_now=sess.run(loss)
         # print(2)
         duration = time.time() - start_time
 
@@ -176,18 +177,19 @@ def main(_):
 
         if step % 5 == 0:
             examples_per_sec = FLAGS.batch_size / float(duration)
-            format_str = ('%s: step %d, (%.1f examples/sec; %.3f '
+            format_str = ('%s: step %d,'# loss = %.2f 
+                          '(%.1f examples/sec; %.3f '
                           'sec/batch)')
-            print(format_str % (datetime.now(), step,
+            print(format_str % (datetime.now(), step,#loss_now,
                                 examples_per_sec, duration))
-        if step % 30 == 0:
+        if step % 50 == 0:
             image_batch, label_batch = sess.run([images_validation, labels_validation])
             validation_accuracy = sess.run(evaluation_step, feed_dict={images: image_batch,
                                                                        labels: label_batch})
             print('Step %d: Validation accuracy = %.1f%%' % (step, validation_accuracy * 100.0))
 
         # Save the model checkpoint periodically.
-        if step % 100 == 0 or (step + 1) == FLAGS.max_steps:
+        if step % 200 == 0 or (step + 1) == FLAGS.max_steps:
             checkpoint_path = os.path.join(FLAGS.train_dir, 'model.ckpt')
             saver.save(sess, checkpoint_path, global_step=step)
 
