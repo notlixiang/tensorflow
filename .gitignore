@@ -103,7 +103,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-inception/train_dir
-inception/official_ckpt
+inception/train_dir/
+inception/official_ckpt/
 *.ckpt
 
+train_dir/

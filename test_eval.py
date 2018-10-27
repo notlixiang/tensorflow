@@ -14,8 +14,6 @@ import tensorflow.contrib.slim as slim
 
 import tensorflow.contrib.slim.nets as nets
 import tensorflow.contrib.slim.python.slim.nets.inception_v3 as inception_v3
-from tensorflow import GraphKeys
-
 from dataset import Dataset, GoodsData
 import flags
 import image_processing
@@ -75,14 +73,10 @@ def main(_):
     images_train, labels_train = image_processing.distorted_inputs(trainset,
                                                                    num_preprocess_threads=num_preprocess_threads)
     images_validation, labels_validation = image_processing.distorted_inputs(validationset,
-                                                                   num_preprocess_threads=num_preprocess_threads)
+                                                                             num_preprocess_threads=num_preprocess_threads)
     # images_splits = tf.split(axis=0, num_or_size_splits=FLAGS.num_gpus, value=images)
     # labels_splits = tf.split(axis=0, num_or_size_splits=FLAGS.num_gpus, value=labels)
-
     input_summaries = copy.copy(tf.get_collection(tf.GraphKeys.SUMMARIES))
-
-    # Number of classes in the Dataset label set plus 1.
-    # Label 0 is reserved for an (unused) background class.
     num_classes = trainset.num_classes() + 1
     print(images_train.shape)
     print(labels_train.shape)
@@ -91,33 +85,20 @@ def main(_):
     with slim.arg_scope(inception_v3.inception_v3_arg_scope()):
         logits, _ = inception_v3.inception_v3(images, num_classes=num_classes)
 
-    trainable_variables = get_trainable_variables()
-    print(trainable_variables)
-
-    # test_tafafdsa=GraphKeys.TRAINABLE_VARIABLES
-    # 获取需要训练的变量
-    # trainable_variables = get_trainable_variables()
     # 定义交叉熵损失
-    # 优化损失函数
     tf.losses.softmax_cross_entropy(tf.one_hot(labels, num_classes), logits, weights=1.0)
-    optimizer=tf.train.AdamOptimizer()
-    train_step = optimizer.minimize(tf.losses.get_total_loss(),var_list=trainable_variables)
-
-    # total_loss=tf.losses.softmax_cross_entropy(tf.one_hot(labels, num_classes), logits, weights=1.0)
-    # train_step = tf.train.RMSPropOptimizer(FLAGS.initial_learning_rate).minimize(total_loss)
-
+    # 优化损失函数
+    train_step = tf.train.RMSPropOptimizer(FLAGS.initial_learning_rate).minimize(tf.losses.get_total_loss())
     # 计算正确率
     with tf.name_scope("evaluation"):
         correct_prediction = tf.equal(tf.argmax(logits, 1), labels)
         evaluation_step = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-    # 导入预训练好的权重
+
     checkpoint_path = tf.train.latest_checkpoint(FLAGS.pretrained_model_checkpoint_path)
-    load_fn = slim.assign_from_checkpoint_fn(checkpoint_path, get_tuned_variables(), ignore_missing_vars=True)
-    # 用于存储finetune后的权重
     print(get_tuned_variables())
+    load_fn = slim.assign_from_checkpoint_fn(checkpoint_path, get_tuned_variables(), ignore_missing_vars=True)
+
     saver = tf.train.Saver()
-
-
     config = tf.ConfigProto(
         allow_soft_placement=True,
         log_device_placement=FLAGS.log_device_placement
@@ -131,65 +112,19 @@ def main(_):
     init = tf.global_variables_initializer()
     sess.run(init)
 
-    print("loading tuned variables from %s" % checkpoint_path)
     load_fn(sess)
-    # sess.run(load_fn)
-    # coord = tf.train.Coordinator()
-    # threads = tf.train.start_queue_runners(coord=coord)
+
     coord = tf.train.Coordinator()
     threads = tf.train.start_queue_runners(sess=sess, coord=coord)
-    # tf.train.batch
-    # start = 0
-    # end = FLAGS.batch_size
-    batch_size=FLAGS.batch_size
+
+    batch_size = FLAGS.batch_size
     for step in range(FLAGS.max_steps):
-        # print(0)
-        start_time = time.time()
-        # print(1)
-        # image_batch = sess.run(images_train[start:end])
-        # print(2)
-        # # label_batch = sess.run(labels_train[start:end])
-        # label_batch = labels_train[start:end]
-        #
-        # print(3)
-        # images_train, labels_train = image_processing.distorted_inputs(trainset,
-        #                                                                num_preprocess_threads=num_preprocess_threads)
-        # images_validation, labels_validation = image_processing.distorted_inputs(validationset,
-        #                                                                          num_preprocess_threads=num_preprocess_threads)
-
-        image_batch, label_batch = sess.run([images_train, labels_train])
-        # print(3)
-        # sess.run(train_step, feed_dict={
-        #     images: image_batch,
-        #     labels: label_batch
-        # })
-        # print(4)
-        # print(1)
-        sess.run(train_step, feed_dict={
-            images: image_batch,
-            labels: label_batch
-        })
-        # print(2)
-        duration = time.time() - start_time
-
-        # assert not np.isnan(loss_value), 'Model diverged with loss = NaN'
-
-        if step % 5 == 0:
-            examples_per_sec = FLAGS.batch_size / float(duration)
-            format_str = ('%s: step %d, (%.1f examples/sec; %.3f '
-                          'sec/batch)')
-            print(format_str % (datetime.now(), step,
-                                examples_per_sec, duration))
-        if step % 30 == 0:
-            image_batch, label_batch = sess.run([images_validation, labels_validation])
-            validation_accuracy = sess.run(evaluation_step, feed_dict={images: image_batch,
-                                                                       labels: label_batch})
-            print('Step %d: Validation accuracy = %.1f%%' % (step, validation_accuracy * 100.0))
-
-        # Save the model checkpoint periodically.
-        if step % 100 == 0 or (step + 1) == FLAGS.max_steps:
-            checkpoint_path = os.path.join(FLAGS.train_dir, 'model.ckpt')
-            saver.save(sess, checkpoint_path, global_step=step)
+        images_train, labels_train = image_processing.distorted_inputs(trainset,
+                                                                       num_preprocess_threads=num_preprocess_threads)
+        print(2)
+        # labels_train = labels_train.eval(session=sess)
+        images_train, labels_train = sess.run([images_train, labels_train])
+        print(1)
 
 
 if __name__ == '__main__':
