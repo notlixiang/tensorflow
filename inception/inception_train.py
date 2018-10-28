@@ -57,7 +57,7 @@ tf.app.flags.DEFINE_boolean('fine_tune', False,
                             """If set, randomly initialize the final layer """
                             """of weights in order to train the network on a """
                             """new task.""")
-tf.app.flags.DEFINE_string('pretrained_model_checkpoint_path', 'official_ckpt',
+tf.app.flags.DEFINE_string('pretrained_model_checkpoint_path', '',
                            """If specified, restore this pretrained model """
                            """before beginning any training.""")
 
@@ -330,20 +330,10 @@ def train(dataset):
 
         if FLAGS.pretrained_model_checkpoint_path:
             assert tf.gfile.Exists(FLAGS.pretrained_model_checkpoint_path)
-            exclude = ['InceptionV3/Logits', 'InceptionV3/AuxLogits']
-            # variables_to_restore = tf.get_collection(
-            #     slim.variables.VARIABLES_TO_RESTORE)
-            with slim.arg_scope(nets.inception.inception_v3_arg_scope()):
-                logits, end_points = nets.inception.inception_v3_base(X, final_endpoint="Mixed_7a")
-                variables_to_restore = slim.get_variables_to_restore()
-
-            tmpvar= tf.get_collection(slim.variables.VARIABLES_TO_RESTORE)
-            tf.contrib.slim.arg_scope(tmpvar)
-            variables_to_restore = tf.contrib.slim.get_variables_to_restore(exclude=exclude)
+            variables_to_restore = tf.get_collection(
+                slim.variables.VARIABLES_TO_RESTORE)
             restorer = tf.train.Saver(variables_to_restore)
-            ckpt = tf.train.get_checkpoint_state(FLAGS.pretrained_model_checkpoint_path)
-            # restorer.restore(sess, FLAGS.pretrained_model_checkpoint_path)
-            restorer.restore(sess, ckpt.model_checkpoint_path)
+            restorer.restore(sess, FLAGS.pretrained_model_checkpoint_path)
             print('%s: Pre-trained model restored from %s' %
                   (datetime.now(), FLAGS.pretrained_model_checkpoint_path))
 
