@@ -76,7 +76,7 @@ import numpy as np
 import tensorflow as tf
 
 
-image_root_path='E:/proj/raw-data/'
+image_root_path='raw-data/'
 
 tf.app.flags.DEFINE_string('train_directory', image_root_path+'train',
                            'Training data directory')

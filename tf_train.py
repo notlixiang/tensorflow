@@ -13,6 +13,7 @@ import tensorflow.contrib.slim.python.slim.nets.inception_v3 as inception_v3
 
 import image_processing
 from dataset import GoodsData
+# import build_image_data
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -61,6 +62,12 @@ def get_trainable_variables():
 
     return variables_to_train
 
+# def load_labels(label_file):
+#   label = []
+#   proto_as_ascii_lines = tf.gfile.GFile(label_file).readlines()
+#   for l in proto_as_ascii_lines:
+#     label.append(l.rstrip())
+#   return label
 
 def main(_):
     # print(FLAGS.num_preprocess_threads)
@@ -69,6 +76,8 @@ def main(_):
     validationset = GoodsData('validation')
     assert validationset.data_files()
 
+    # lables_output=load_labels(FLAGS.labels_file)
+    # lables_output.append('unknown')
     # get_tuned_variables()
     # get_trainable_variables()
 
@@ -224,7 +233,10 @@ def main(_):
         # Save the model checkpoint periodically.
         if step % 1000 == 0 or (step + 1) == FLAGS.max_steps:
             checkpoint_path = os.path.join(FLAGS.train_dir, 'model.ckpt')
-            saver.save(sess, checkpoint_path, global_step=step)
+            saver.save(sess, checkpoint_path)
+            # constant_graph = tf.get_default_graph().as_graph_def()
+            # with tf.gfile.FastGFile(os.path.join(FLAGS.train_dir, 'expert-graph.pb'), mode='wb') as f:
+            #     f.write(constant_graph.SerializeToString())
 
 
 if __name__ == '__main__':
