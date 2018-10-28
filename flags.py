@@ -67,4 +67,12 @@ tf.app.flags.DEFINE_float('num_epochs_per_decay', 30.0,
 tf.app.flags.DEFINE_float('learning_rate_decay_factor', 0.16,
                           """Learning rate decay factor.""")
 
-
+tf.app.flags.DEFINE_integer('batch_size', 16,
+                            """Number of images to process in a batch.""")
+tf.app.flags.DEFINE_integer('image_size', 299,
+                            """Provide square images of this size.""")
+tf.app.flags.DEFINE_integer('num_preprocess_threads', 4,
+                            """Number of preprocessing threads per tower. """
+                            """Please make this a multiple of 4.""")
+tf.app.flags.DEFINE_integer('num_readers', 4,
+                            """Number of parallel readers during train.""")
