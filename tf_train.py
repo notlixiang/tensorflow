@@ -77,14 +77,14 @@ def main(_):
     num_preprocess_threads = FLAGS.num_preprocess_threads * FLAGS.num_gpus
 
     if FLAGS.from_official == True:
-        batch_size = FLAGS.batch_size * 4
+        train_batch_size = FLAGS.batch_size * 4
     else:
-        batch_size = FLAGS.batch_size
+        train_batch_size = FLAGS.batch_size
 
-    print('batch_size',batch_size)
+    print('train_batch_size',train_batch_size)
 
     images_train, labels_train = image_processing.distorted_inputs(trainset,
-                                                                   # batch_size=batch_size,
+                                                                   batch_size=train_batch_size,
                                                                    num_preprocess_threads=num_preprocess_threads)
     images_validation, labels_validation = image_processing.distorted_inputs(validationset, batch_size=64,
                                                                              num_preprocess_threads=num_preprocess_threads)
@@ -150,8 +150,8 @@ def main(_):
     init = tf.global_variables_initializer()
     sess.run(init)
 
-    # merged = tf.summary.merge_all()
-    # writer = tf.summary.FileWriter("logs/", sess.graph)
+    merged = tf.summary.merge_all()
+    writer = tf.summary.FileWriter("logs/", sess.graph)
 
     print("loading tuned variables from %s" % checkpoint_path)
     load_fn(sess)
@@ -170,7 +170,7 @@ def main(_):
     checkpoint_path = os.path.join(FLAGS.train_dir, 'model.ckpt')
     saver.save(sess, checkpoint_path, global_step=0)
     for step in range(FLAGS.max_steps):
-        print(0)
+        # print(0)
         start_time = time.time()
         # print(1)
         # image_batch = sess.run(images_train[start:end])
@@ -212,9 +212,9 @@ def main(_):
             image_batch, label_batch = sess.run([images_validation, labels_validation])
             validation_accuracy = sess.run(evaluation_step, feed_dict={images: image_batch,
                                                                        labels: label_batch})
-            # result = sess.run(merged, feed_dict={images: image_batch,
-            #                                      labels: label_batch})
-            # writer.add_summary(result, step)
+            result = sess.run(merged, feed_dict={images: image_batch,
+                                                 labels: label_batch})
+            writer.add_summary(result, step)
             print('Step %d: Validation accuracy = %.1f%%' % (step, validation_accuracy * 100.0))
 
         # Save the model checkpoint periodically.
