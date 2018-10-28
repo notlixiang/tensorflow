@@ -118,9 +118,10 @@ def main(_):
     # trainable_variables = get_trainable_variables()
     # 定义交叉熵损失
     # 优化损失函数
-    tf.losses.softmax_cross_entropy(tf.one_hot(labels, num_classes), logits, weights=1.0)
+    loss=tf.losses.softmax_cross_entropy(tf.one_hot(labels, num_classes), logits, weights=1.0)
+    tf.summary.scalar('loss', loss)
     optimizer = tf.train.AdamOptimizer()
-    loss = tf.losses.get_total_loss()
+    # loss = tf.losses.get_total_loss()
     train_step = optimizer.minimize(loss, var_list=trainable_variables)
 
     # total_loss=tf.losses.softmax_cross_entropy(tf.one_hot(labels, num_classes), logits, weights=1.0)
@@ -130,6 +131,7 @@ def main(_):
     with tf.name_scope("evaluation"):
         correct_prediction = tf.equal(tf.argmax(logits, 1), labels)
         evaluation_step = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+        tf.summary.scalar('validation_accuracy', evaluation_step)
     # 导入预训练好的权重
     checkpoint_path = tf.train.latest_checkpoint(checkpoint_path)
     load_fn = slim.assign_from_checkpoint_fn(checkpoint_path, tuned_variables, ignore_missing_vars=True)
@@ -208,10 +210,12 @@ def main(_):
                           'sec/batch)')
             print(format_str % (datetime.now(), step,  # loss_now,
                                 examples_per_sec, duration))
+
         if step % 50 == 0:
             image_batch, label_batch = sess.run([images_validation, labels_validation])
             validation_accuracy = sess.run(evaluation_step, feed_dict={images: image_batch,
                                                                        labels: label_batch})
+
             result = sess.run(merged, feed_dict={images: image_batch,
                                                  labels: label_batch})
             writer.add_summary(result, step)
