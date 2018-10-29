@@ -219,7 +219,10 @@ def main(_):
                           'sec/batch)')
             print(format_str % (datetime.now(), step,  # loss_now,
                                 examples_per_sec, duration))
-
+            tempvar=tf.one_hot(labels, num_classes)
+            print(sess.run(labels, feed_dict={images: image_batch, labels: label_batch}))
+            print(sess.run(tempvar,feed_dict={images: image_batch, labels: label_batch}))
+            print(sess.run(tf.nn.softmax(logits),feed_dict={images: image_batch, labels: label_batch}))
         if step % 50 == 0:
             image_batch, label_batch = sess.run([images_validation, labels_validation])
             validation_accuracy = sess.run(evaluation_step, feed_dict={images: image_batch,

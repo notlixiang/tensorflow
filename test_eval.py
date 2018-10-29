@@ -29,7 +29,6 @@ RMSPROP_EPSILON = 1.0  # Epsilon term for RMSProp.
 CHECKPOINT_EXCLUDE_SCOPES = 'InceptionV3/Logits, InceptionV3/AuxLogits'
 TRAINABLE_SCOPES = 'InceptionV3/Logits, InceptionV3/AuxLogits'
 
-
 import logging
 import random
 import time
@@ -50,6 +49,7 @@ def get_all_variables():
     variables = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES)
     variables_to_train.extend(variables)
     return variables_to_train
+
 
 def read_tensor_from_image_file(file_name, input_height=299, input_width=299,
                                 input_mean=128, input_std=128):
@@ -78,12 +78,12 @@ def read_tensor_from_image_file(file_name, input_height=299, input_width=299,
 
 
 def load_labels(label_file):
-  label = []
-  proto_as_ascii_lines = tf.gfile.GFile(label_file).readlines()
-  for l in proto_as_ascii_lines:
-    label.append(l.rstrip())
-  label.append('unknown')
-  return label
+    label = ['unknown']
+    proto_as_ascii_lines = tf.gfile.GFile(label_file).readlines()
+    for l in proto_as_ascii_lines:
+        label.append(l.rstrip())
+    print(label)
+    return label
 
 
 @app.route('/')
@@ -91,13 +91,13 @@ def classify():
     file_name = request.args['file']
 
     img_recv = read_tensor_from_image_file(file_name,
-                                    input_height=FLAGS.image_size,
-                                    input_width=FLAGS.image_size,)
+                                           input_height=FLAGS.image_size,
+                                           input_width=FLAGS.image_size, )
 
     # logits_tensor = sess.graph.get_tensor_by_name('logits')
     start = time.time()
-    results_softmax=tf.nn.softmax(logits=logits)
-    results=sess.run(results_softmax,feed_dict={images: img_recv})
+    results_softmax = tf.nn.softmax(logits=logits)
+    results = sess.run(results_softmax, feed_dict={images: img_recv})
     # results = sess.run(output_operation.outputs[0],
     #                    {input_operation.outputs[0]: t})
     end = time.time()
@@ -111,6 +111,7 @@ def classify():
         print(lables_output[i], results[i])
 
     return jsonify(lables_output, results.tolist())
+
 
 # def main(_):
 
@@ -176,7 +177,11 @@ if __name__ == '__main__':
 
     load_fn(sess)
 
+    image_batch, label_batch = sess.run([images_validation, labels_validation])
+    validation_accuracy = sess.run(evaluation_step, feed_dict={images: image_batch,
+                                                               labels: label_batch})
 
+    print('Step %d: Validation accuracy = %.1f%%' % (0, validation_accuracy * 100.0))
     # for step in range(FLAGS.max_steps):
     #     images_train, labels_train = image_processing.distorted_inputs(trainset,
     #                                                                    num_preprocess_threads=num_preprocess_threads)
