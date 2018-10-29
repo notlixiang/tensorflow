@@ -108,3 +108,4 @@ inception/official_ckpt/
 *.ckpt
 
 train_dir/
+logs/
